@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/auth.guard.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -335,12 +335,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510422241641</updated>
       <workItem from="1510422242758" duration="1457000" />
-      <workItem from="1510585826666" duration="7819000" />
+      <workItem from="1510585826666" duration="7954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9276000" />
+    <option name="totallyTimeSpent" value="9411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,7 +742,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/auth.guard.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
