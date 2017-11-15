@@ -14,7 +14,7 @@ const server = http.Server(app);
 
 // Mongoose setup
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://localhost/e34`);
+mongoose.connect(process.env.DB_CONNECTION || 'mongodb://localhost/e34');
 
 const db = mongoose.connection;
 db.on('error', function(err){
