@@ -56,3 +56,5 @@ src/bower_components
 dist/
 
 .idea/
+
+.idea/workspace.xml
