@@ -14,7 +14,7 @@ const server = http.Server(app);
 
 // Mongoose setup
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DB_CONNECTION || 'mongodb://localhost/e34');
+mongoose.connect(process.env.DB_CONNECTION ||  'mongodb://heroku_9gcl29tz:heroku_9gcl29tz@ds111066.mlab.com:11066/heroku_9gcl29tz');
 
 const db = mongoose.connection;
 db.on('error', function(err){
