@@ -2,15 +2,9 @@ let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
 let userSchema = mongoose.Schema({
-  fName: {type: String, required: true},
-  lName: {type: String, required: true},
-  salary: {type: Number, required: true},
-  salaryPayDay: {type: Number, default: 0, required: true},
-  salaryPayDate: {type: Date},
-  nextSalaryPayDate: {type: Date},
-  balance: {type: Number, default: 0},
 
-  createdAt: {type: Date, default: Date.now}
+},{
+  timestamps: true
 });
 
 userSchema.plugin(passportLocalMongoose, {
