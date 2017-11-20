@@ -1,6 +1,6 @@
 module.exports = function(express, passport) {
   let router = express.Router();
-  let UserModel = require('./user.model').model;
+  let UserModel = require('../../../models/user.model').model;
   let errors = require('../../../shared/error');
   let LocalStrategy = require('passport-local').Strategy;
 

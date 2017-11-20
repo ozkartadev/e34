@@ -1,12 +1,13 @@
-module.exports = function (express) {
+module.exports = function (express, passport) {
   let router = express.Router();
-  let passport = require('passport');
 
-  router.use(passport.initialize());
-  router.use(passport.session());
+  router.get('/test', (req, res) => {
+    res.status(200).json({});
+  });
 
+  let userController = require('./user/user.component')(express, passport);
 
-
+  router.use('/user', userController);
 
   return router;
 };

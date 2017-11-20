@@ -25,31 +25,3 @@ let MissingRequiredDataMessage = {
   title: 'Missing Data',
   msg: 'Data needed is not presented'
 };
-
-let SignInErrorMessage = {
-  code: 401,
-  name: 'SIGN_IN_ERROR',
-  title: 'Sign In Error',
-  msg: 'Error while Sign in'
-};
-
-let RegistrationErrorMessage = {
-  code: 401,
-  name: 'REGISTRATION_IN_ERROR',
-  title: 'Registration Error',
-  msg: 'Error while Register'
-};
-
-let UserExistsErrorMessage = {
-  code: 401,
-  name: 'USER_EXISTS_ERROR',
-  title: 'User Exists Error',
-  msg: 'A user with the given EMAIL is already registered'
-};
-
-let ErrorWhileTransactionMessage = {
-  code: 500,
-  name: 'ERROR_WHILE_TRANSACTION',
-  title: '',
-  msg: 'Error ocured while making transaction.'
-};
