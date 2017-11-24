@@ -25,7 +25,7 @@ let storeSchema = mongoose.Schema({
   }],
   // TODO sales
   rating: {type: Number, required: true, default: 0},
-  userFeadback: {type: mongoose.Schema.Types.ObjectId, ref: 'Feedback'}
+  userFeedback: {type: mongoose.Schema.Types.ObjectId, ref: 'Feedback'}
 },{
   timestamps: true
 });

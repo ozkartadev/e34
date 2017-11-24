@@ -7,8 +7,10 @@ module.exports = function (express, passport) {
   });
 
   let userController = require('./user/user.component')(express, passport);
+  let initController = require('./initialization/init')(express, passport);
 
   router.use('/user', userController);
+  router.use('/init', initController);
 
   return router;
 };
