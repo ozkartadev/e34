@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/take';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {AuthService} from './network/services/auth.service';
+import {AuthService} from './network/services/shared/user/auth.service';
 import {Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
 
 @Injectable()

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from '../../../network/services/auth.service';
+import {AuthService} from '../../../network/services/shared/user/auth.service';
 @Component ({
   selector: 'app-visitor-landing-page',
   templateUrl: './landing.component.html',

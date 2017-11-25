@@ -1,5 +1,5 @@
 import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
-import {AuthService} from '../../../network/services/auth.service';
+import {AuthService} from '../../../network/services/shared/user/auth.service';
 import {NgForm, FormGroup, FormArray, FormControl} from '@angular/forms';
 import {Router} from '@angular/router';
 @Component ({

@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, AfterViewChecked} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgForm, FormGroup, FormArray, FormControl} from '@angular/forms';
-import {AuthService} from '../../../network/services/auth.service';
+import {AuthService} from '../../../network/services/shared/user/auth.service';
 @Component ({
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],

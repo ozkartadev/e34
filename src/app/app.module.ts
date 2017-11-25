@@ -9,10 +9,11 @@ import {HttpClientModule} from '@angular/common/http';
 // Modules
 import {VisitorModule} from './modules/visitor.module';
 import {AppComponent} from './app.component';
+import {CommonModule} from '@angular/common';
 // Components
 import {MainNavbarComponent} from './components/shared/navbar/navbar.component';
 // Services
-import {AuthService} from './network/services/auth.service';
+import {AuthService} from './network/services/shared/user/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AuthService} from './network/services/auth.service';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    VisitorModule
+    VisitorModule,
+    CommonModule
   ],
   providers: [
     AuthService,
