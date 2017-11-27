@@ -5,10 +5,13 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a [routerLink]="['/']">Home</a></li>
+      <li app-nested-navbar-categories-v1 [categories]="categories"></li>
+      <li><a [routerLink]="['/stores']">Stores</a></li>
+
+      <li></li>
       <li><a href="#">About Us</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#">FAQ</a></li>
-      <li app-nested-navbar-categories-v1 [categories]="categories"></li>
       <li><a [routerLink]="['/login']">Log In</a></li>
       <li><a [routerLink]="['/register']">Register</a></li>
     </ul>

@@ -10,10 +10,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {VisitorModule} from './modules/visitor.module';
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
+import {BusyModule} from 'angular2-busy';
 // Components
 import {MainNavbarComponent} from './components/shared/navbar/navbar.component';
 // Services
 import {AuthService} from './network/services/shared/user/auth.service';
+import {AppService} from './network/services/shared/app/app.service';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,12 @@ import {AuthService} from './network/services/shared/user/auth.service';
     FormsModule,
     ReactiveFormsModule,
     VisitorModule,
-    CommonModule
+    CommonModule,
+    BusyModule
   ],
   providers: [
     AuthService,
+    AppService,
     {
       provide: MATERIAL_COMPATIBILITY_MODE,
       useValue: true
