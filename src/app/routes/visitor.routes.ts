@@ -7,7 +7,8 @@ import {LoginComponent} from '../components/visitor/login/login.component';
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: '**', redirectTo: '/'}
 ];
 
 export const Routing = RouterModule.forRoot(routes, {enableTracing: true});
