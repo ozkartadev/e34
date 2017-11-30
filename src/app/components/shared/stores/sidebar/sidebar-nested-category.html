@@ -1,0 +1,93 @@
+<!--<div  *ngFor="let category of categories">-->
+  <!--<label class="custom-control custom-checkbox" *ngIf="true">-->
+    <!--<input type="checkbox" class="custom-control-input" (change)="changeCategoryFilter(category._id)">-->
+    <!--<span class="custom-control-indicator"></span>-->
+    <!--<span class="custom-control-description" *ngIf="category && category.name">{{category.categoryName}}</span>-->
+
+    <!--<app-sidebar-nested-category [categories]="category.childCategories"-->
+                             <!--(onCheckboxClick)="changeCategoryFilter($event)"-->
+                             <!--*ngIf="category.childCategories && category.childCategories.length">-->
+    <!--</app-sidebar-nested-category>-->
+  <!--</label>-->
+<!--</div>-->
+
+
+
+
+      <!--<a href="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch demo modal</a>-->
+      <!--<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+        <!--<div class="modal-dialog">-->
+          <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+              <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+              <!--<h3 id="myModalLabel">Modal header</h3>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+              <!--<p>One fine body…</p>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+              <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>-->
+              <!--<button class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+      <!--<div id="MainMenu">-->
+        <!--<div class="list-group panel">-->
+          <!--<ng-container *ngFor="let category of categories">-->
+            <!--<a href="#category{{category._id}}" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">{{category.categoryName}}</a>-->
+            <!--<div class="collapse" id="category{{category._id}}">-->
+              <!--<a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">Subitem 1 <i class="fa fa-caret-down"></i></a>-->
+              <!--<div class="collapse list-group-submenu" id="SubMenu1">-->
+                <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>-->
+                <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>-->
+                <!--<a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>-->
+                <!--<div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">-->
+                  <!--<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>-->
+                  <!--<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>-->
+                <!--</div>-->
+                <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>-->
+              <!--</div>-->
+              <!--<a href="javascript:;" class="list-group-item">Subitem 2</a>-->
+              <!--<a href="javascript:;" class="list-group-item">Subitem 3</a>-->
+            <!--</div>-->
+          <!--</ng-container>-->
+
+          <!--&lt;!&ndash;<a href="#demo4" class="list-group-item list-group-item" data-toggle="collapse" data-parent="#MainMenu">Item 4</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="collapse" id="demo4">&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="list-group-item">Subitem 1</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="list-group-item">Subitem 2</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="list-group-item">Subitem 3</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<a href="#demo5" class="list-group-item list-group-item" data-toggle="collapse" data-parent="#MainMenu">Item 5</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="collapse" id="demo5">&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="#" class="list-group-item">Subitem 1</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="list-group-item">Subitem 2</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="list-group-item">Subitem 3</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+      <!--</div>-->
+
+<ng-container *ngTemplateOutlet="mainTemplate;context: {_categories: categories, _collapsed: true}">
+</ng-container>
+
+
+<ng-template #mainTemplate let-_categories="_categories" let-_collapsed="_collapsed">
+  <ul class="">
+    <li *ngFor="let category of _categories" class="">
+      <span class="glyphicon glyphicon-plus" (click)="category.collapsed = true" *ngIf="!category.collapsed"></span>
+      <span class="glyphicon glyphicon-minus" (click)="category.collapsed = false" *ngIf="category.collapsed"></span>
+
+      <a href="#">{{category.categoryName}}</a>
+      <span class="badge badge-default badge-pill" *ngIf="category.childCategories">{{category.childCategories.length}}</span>
+
+      <ng-container *ngIf="category.collapsed && category.childCategories">
+        <ng-container *ngTemplateOutlet="mainTemplate;context: {_categories: category.childCategories, _collapsed: category.collapsed}">
+        </ng-container>
+      </ng-container>
+    </li>
+
+  </ul>
+</ng-template>
