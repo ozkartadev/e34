@@ -3,6 +3,7 @@ import {AppService} from '../../../../network/services/shared/app/app.service';
 @Component({
   selector: 'app-sidebar-nested-category',
   templateUrl: './sidebar-nested-category.html',
+  styleUrls: ['./sidebar-nested-category.style.css'],
   inputs: ['categories'],
   outputs: ['onCheckboxClick']
 })
